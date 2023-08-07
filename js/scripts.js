@@ -10,9 +10,13 @@ let pokemonRepository = (function(){
             return pokemonList;
         },
         add: function(item){
-            return pokemonList.push(item);
+             if (typeof item === 'object')  {
+                return pokemonList.push(item);
+             } else {
+                console.log("Please check the inputs")
+             }
         }
-      };
+      };     
 })();
 
 pokemonRepository.add({name: 'Pidgey', height: 0.3, types: ["normal", "flying"]})
