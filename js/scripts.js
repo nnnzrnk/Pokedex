@@ -1,37 +1,44 @@
-let pokemonRepository = (function(){
-    let pokemonList = [
-        { name: "Mantine", height: 2.1, types: ["water", "flying"] },
-        { name: "Nidoking", height: 1.4, types: ["ground", "poison"] },
-        { name: "Zekrom", height: 2.9, types: ["dragon", "electric"] },
-      ];
+let pokemonRepository = (function () {
+  let pokemonList = [
+    { name: "Mantine", height: 2.1, types: ["water", "flying"] },
+    { name: "Nidoking", height: 1.4, types: ["ground", "poison"] },
+    { name: "Zekrom", height: 2.9, types: ["dragon", "electric"] },
+  ];
 
-      return {
-        getAll: function(){
-            return pokemonList;
-        },
-        add: function(item){
-             if (typeof item === 'object')  {
-                return pokemonList.push(item);
-             } else {
-                console.log("Please check the inputs")
-             }
-        }
-      };     
+  function showDetails(pokemon){
+    console.log(pokemon);
+  };
+  
+  return {
+    getAll: function () {
+      return pokemonList;
+    },
+    add: function (item) {
+      if (typeof item === "object" && 'name' in item && 'height' in item && 'types' in item) {
+        pokemonList.push(item);
+      } else {
+        console.log("Please check the inputs");
+      }
+    },
+    addListItem: function addListItem(pokemon) {
+      let unorderedList = document.querySelector(".pokemon-list");
+      let listItem = document.createElement("li");
+      let button = document.createElement("button");
+      button.innerText = pokemon.name
+      button.classList.add("button");
+      listItem.appendChild(button);
+      unorderedList.appendChild(listItem);
+      button.addEventListener('click', () => showDetails(pokemon));
+    },
+  };
+
 })();
 
 pokemonRepository.add({name: 'Pidgey', height: 0.3, types: ["normal", "flying"]})
 
-//completed Task 1.5 
-//First way:
+pokemonRepository.getAll().forEach(function (pokemon) {
+    pokemonRepository.addListItem(pokemon);
+});
 
-// pokemonList.forEach(function(pokemons){
-//     console.log(`${pokemons.name} has height ${pokemons.height} and its types are ${pokemons.types} `)
-// });
 
-//Second way:
-
-function getPokemonsInfo(pokemons){
-    console.log(`${pokemons.name} has height ${pokemons.height} and its types are ${pokemons.types} `)
-}
-pokemonRepository.getAll().forEach(getPokemonsInfo)
 
