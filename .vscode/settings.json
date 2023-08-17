@@ -1,3 +1,4 @@
 {
-    "liveServer.settings.multiRootWorkspaceName": "Pokedex"
+  "liveServer.settings.multiRootWorkspaceName": "Pokedex",
+  "liveServer.settings.port": 5501
 }
