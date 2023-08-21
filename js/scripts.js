@@ -20,8 +20,10 @@ let pokemonRepository = (function () {
     let unorderedList = document.querySelector(".pokemon-list");
     let listItem = document.createElement("li");
     let button = document.createElement("button");
+    listItem.classList.add('list-group-item');
+    listItem.classList.add('col-md-4');
     button.innerText = pokemon.name;
-    button.classList.add("button");
+    button.classList.add("btn");
     listItem.appendChild(button);
     unorderedList.appendChild(listItem);
     button.addEventListener("click", () => showDetails(pokemon))
@@ -87,7 +89,7 @@ let pokemonRepository = (function () {
     contentElement.innerText = 'Height: ' + pokemon.height;
   
     let imageElement = document.createElement('img');
-    imageElement.src = imageElement.imageUrl;
+    imageElement.src = pokemon.imageUrl;
   
     modal.appendChild(closeButtonElement);
     modal.appendChild(titleElement);
