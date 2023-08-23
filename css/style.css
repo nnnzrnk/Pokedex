@@ -1,16 +1,31 @@
+  @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap');
+body {
+   font-family: 'Quicksand', sans-serif;
+}
 main {
   background-color: #edf6f9;
-  max-width: 90%;
+  max-width: 80%;
   margin: 20px auto;
   padding: 20px;
   border: 1px solid #4f6d7a;
   border-radius: 5px;
 }
 
-.btn {
+nav {
+  margin-bottom: 30px;
+  background-image: linear-gradient(#ffcb05,#edf6f9);
+  border-radius: 5px;
+}
+
+.logo-img {
+  max-width: 30%;
+  margin: 0 auto;
+}
+
+.my-btn {
   border: none;
   color: #ffff;
-  background-color: #4f6d7a;
+  background-color: #3564ae;
   padding: 10px 15px;
   margin: 5px auto;
   border-radius: 5px;
@@ -19,17 +34,62 @@ main {
   font-size: 22px;
   text-transform: uppercase;
   transition: all 200ms ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 170px;
 }
 
 .btn:hover {
   opacity: 0.8;
   color: #ffff;
-  background-color: #4f6d7a;
+  background-color: #3564ae;
+  
+}
+
+.btn-modal-close {
+  border: none;
+  color: #ffff;
+  background-color: #3564ae;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+
+.modal {
+  margin: 0;
+  --bs-modal-footer-border-color: none;
+  --bs-modal-header-border-color: none;
+}
+
+.my-modal-body {
+  margin-top: 20px;
+ 
+}
+
+.my-modal-text {
+  margin-left: 50px;
+  font-size: 22px;
+}
+
+.modal-img { 
+  float: right;
+  margin-top: 0;
+  margin-right: 50px;
+  width: 200px;
+} 
+
+.modal-title {
+  text-transform: capitalize;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 34px;
+  font-weight: 600;
+  color: #3564ae;
 }
 
 
 
-#modal-container {
+/* #modal-container {
     display: none;
   }
   
@@ -85,4 +145,4 @@ main {
    float: right;
    width: 40%;
    margin-right: 50px;
-  }
+  } */
