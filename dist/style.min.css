@@ -1,6 +1,12 @@
-  @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap');
+@import url(https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap);
+.btn-modal-close,
+.btn:hover,
+.my-btn {
+  color: #ffff;
+  background-color: #3564ae;
+}
 body {
-   font-family: 'Quicksand', sans-serif;
+  font-family: Quicksand, sans-serif;
 }
 main {
   background-color: #edf6f9;
@@ -10,22 +16,17 @@ main {
   border: 1px solid #4f6d7a;
   border-radius: 5px;
 }
-
 nav {
   margin-bottom: 30px;
-  background-image: linear-gradient(#ffcb05,#edf6f9);
+  background-image: linear-gradient(#ffcb05, #edf6f9);
   border-radius: 5px;
 }
-
 .logo-img {
   max-width: 30%;
   margin: 0 auto;
 }
-
 .my-btn {
   border: none;
-  color: #ffff;
-  background-color: #3564ae;
   padding: 10px 15px;
   margin: 5px auto;
   border-radius: 5px;
@@ -33,51 +34,38 @@ nav {
   cursor: pointer;
   font-size: 22px;
   text-transform: uppercase;
-  transition: all 200ms ease-in-out;
+  transition: 0.2s ease-in-out;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
   width: 170px;
 }
-
 .btn:hover {
   opacity: 0.8;
-  color: #ffff;
-  background-color: #3564ae;
-  
 }
-
 .btn-modal-close {
   border: none;
-  color: #ffff;
-  background-color: #3564ae;
   border-radius: 5px;
   padding: 5px 10px;
 }
-
 .modal {
   margin: 0;
   --bs-modal-footer-border-color: none;
   --bs-modal-header-border-color: none;
 }
-
 .my-modal-body {
   margin-top: 20px;
- 
 }
-
 .my-modal-text {
   margin-left: 50px;
   font-size: 22px;
 }
-
-.modal-img { 
+.modal-img {
   float: right;
   margin-top: 0;
   margin-right: 50px;
   width: 200px;
-} 
-
+}
 .modal-title {
   text-transform: capitalize;
   margin: 0 auto;
@@ -86,6 +74,3 @@ nav {
   font-weight: 600;
   color: #3564ae;
 }
-
-
-

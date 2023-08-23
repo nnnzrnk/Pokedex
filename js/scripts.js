@@ -133,13 +133,6 @@ let pokemonRepository = (function () {
   }
 })();
 
-//   pokemonRepository.add({name: 'Pidgey', height: 0.3, types: ["normal", "flying"]})
-
-//   pokemonRepository.getAll().forEach(function (pokemon) {
-//       pokemonRepository.addListItem(pokemon);
-//   });
-
-//  console.log(pokemonRepository.find('Zekrom'))
 
 pokemonRepository.loadList().then(function () {
   pokemonRepository.getAll().forEach(function (pokemon) {
