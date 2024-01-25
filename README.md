@@ -10,4 +10,5 @@ data from an external API and allows you to view data points in detail.
 * JavaScript
 * jQuery
 * Bootstrap
+  ---
   [To the Pokédex](https://nnnzrnk.github.io/Pokedex/)
